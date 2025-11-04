@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FORTUNEX — YOUR NO.1 ONLINE MONEY MAKING PLATFROM</title>
+  <meta name="FortuneX is a digital and advertising platform that allow members earn for every activity on the site, you earn every second and minutes you spend on the site either for scrolling, learning, teaching, reading, laughing or listening to music." content="Empower users earn effortlessly" />
+
+  <!-- TikTok Pixel Code Start -->
+  <script>
+  !function (w, d, t) {
+    w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(
+    var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script")
+    ;n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(n,s)};ttq.load('D3KP99BC77U1STIOEL70');ttq.page();
+  }(window, document, 'ttq');
+  </script>
+  <!-- TikTok Pixel Code End -->
+
+  <style>
+    :root{
+      --bg:#8b0000;
+      --card:#ff2e2e;
+      --accent-gold:#f2ea97;
+      --accent-crimson:#b30000; /* crimson-ish */
+      --muted:#e6e6e6;
+      --glass:rgba(255,255,255,0.03);
+      --maxw:1100px;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;background:linear-gradient(180deg,#8b0000 0%, #8b0000 100%); color:#fffff}
+    header{display:flex;align-items:center;justify-content:space-between;padding:18px 24px;max-width:var(--maxw);margin:0 auto;}
+    .logo{display:flex;align-items:center;gap:12px}
+    .logo img{width:44px;height:44px;border-radius:8px;object-fit:cover}
+    .brand{font-weight:800;color:var(--accent-crimson);letter-spacing:1px}
+    nav{display:flex;gap:14px;align-items:center}
+    nav a{color:var(--muted);text-decoration:none;padding:8px 12px;border-radius:8px}
+    nav a:hover{color:#ff2e2e;background:var(--glass)}
+    .cta{background:linear-gradient(90deg,var(--accent-crimson),var(--accent-gold));color:#fff;padding:10px 14px;border-radius:8px;border:none;cursor:pointer;font-weight:700}
+    main{max-width:var(--maxw);margin:28px auto;padding:28px}
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center}
+    .hero-left h1{font-size:clamp(26px,4.4vw,44px);margin:0 0 12px;color:#fff}
+    .hero-left p{color:#dcdcdc;margin:0 0 18px;line-height:1.45}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+    .btn-outline{background:transparent;border:1px solid rgba(255, 255, 255, 0.06);padding:10px 14px;border-radius:8px;color:#ddd;cursor:pointer}
+    .card{background:linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255,255,255,0.01));padding:18px;border-radius:12px;box-shadow:0 6px 30px rgba(2,6,23,0.6)}
+    .hero-right .cover{width:100%;height:260px;border-radius:10px;background:linear-gradient(135deg,#8b0000,#071226);display:flex;align-items:center;justify-content:center;color:#dcdcdc;padding:16px}
+    .plans{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:20px}
+    .plan{background:linear-gradient(180deg,#8b0000,#ff2e2e);padding:14px;border-radius:10px;border:1px solid rgba(255,255,255,0.03);text-align:center}
+    .plan h4{margin:0 0 6px;color:var(--accent-crimson)}
+    .plan .price{font-weight:800;font-size:18px;color:rgba(14, 13, 13, 0.06);margin-bottom:8px}
+    .features{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:28px}
+    .feature{background:var(--card);padding:14px;border-radius:10px;border:1px solid rgba(255,255,255,0.02)}
+    footer{max-width:var(--maxw);margin:28px auto;color:#dcdcdc;padding:24px}
+    /* modal */
+    .modal-backdrop{position:fixed;inset:0;background:rgba(248, 3, 35, 0.75);display:none;align-items:center;justify-content:center;z-index:40}
+    .modal{width:100%;max-width:480px;background:linear-gradient(180deg,#ff2e2e,#8b0000);padding:22px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
+    .modal h3{margin:0 0 10px;color:var(--accent-crimson)}
+    .input,select{width:100%;padding:12px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:#8b0000;color:#fff;margin-bottom:10px}
+    .row{display:flex;gap:10px}
+    .small{flex:1}
+    .muted{color:#dcdcdc;font-size:13px}
+    .link-btn{background:transparent;border:none;color:var(--accent-gold);cursor:pointer;text-decoration:underline;padding:0}
+    /* Notifications (toasts) — centered gold container */
+    #notifications {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 99999;
+      width: 420px;
+      max-width: 90vw;
+      pointer-events: none;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 10px;
+      padding: 8px;
+      box-sizing: border-box;
+    }
+
+    .toast {
+      pointer-events: auto;
+      background: linear-gradient(180deg,#fff8dc,#f7e7a1); /* light gold container */
+      color: #111;
+      padding: 14px 16px;
+      border-radius: 12px;
+      margin: 0;
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      box-shadow: 0 14px 40px rgba(0,0,0,0.35);
+      border: 2px solid var(--accent-crimson);
+      opacity: 0;
+      transform: translateY(-8px);
+      transition: opacity .36s ease, transform .36s ease;
+      font-size: 14px;
+    }
+
+    .toast.show { opacity: 1; transform: translateY(0); }
+
+    .toast .avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--accent-crimson);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:700;
+      color:#fff;
+      flex: 0 0 44px;
+      font-size: 14px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+    }
+
+    .toast .txt { line-height:1.15; color:#111; }
+    .toast .txt .who { font-weight:700; display:block; color:#111; }
+    .toast.small { width: 100%; font-size:14px; }
+    @media(max-width:900px){
+      .hero{grid-template-columns:1fr}
+      .plans{grid-template-columns:repeat(1,1fr)}
+      .features{grid-template-columns:1fr}
+      header{padding:12px}
+    }
+  </style>
+
+  <script src="https://js.paystack.co/v1/inline.js"></script>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="placeholder-logo.PNG" alt="logo" />
+      <div>
+        <div class="brand">FORTUNEX</div>
+        <div class="muted" style="font-size:12px">EARNING EFFORTLESSLY</div>
+      </div>
+    </div>
+    <nav>
+      <a href="#plans">Plans</a>
+      <a href="#features">Features</a>
+      <a href="#contact">Contact</a>
+      <butt on id="joinNow" class="cta">JOIN NOW</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-left">
+        <h1>To Renovate, Redefine & Rebrand.</h1>
+        <p>FortuneX is a digital and advertising platform that allow members earn for every activity on the site, you earn every second and minutes you spend on the site either for scrolling, learning, teaching, reading, laughing or listening to music.
+</p>
+        <div class="hero-actions">
+          <button id="registerNow" class="cta">REGISTER NOW</button>
+          <button class="btn-outline" id="learnMore">Learn more</button>
+        </div>
+
+        <div id="plans" class="plans card" aria-labelledby="plans">
+          <div class="plan">
+            <h4>Pro</h4>
+            <div class="price">₦14,500</div>
+            <div class="muted">Recommended</div>
+           <div style="margin-top:8px;">
+             <button class="link-btn" id="viewProFlyer" type="button">View Pro Flyer</button>
+           </div>
+          </div>
+          <div class="plan">
+            <h4>Starter</h4>
+            <div class="price">₦7,500</div>
+            <div class="muted">Beginner package</div>
+           <div style="margin-top:8px;">
+             <button class="link-btn" id="viewStarterFlyer" type="button">View Starter Flyer</button>
+           </div>
+          </div>
+          <div class="plan">
+            <h4>Enterprise</h4>
+            <div class="price">Contact</div>
+            <div class="muted">Custom solutions</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="card cover">
+          <div>
+            <h3 style="margin:0 0 10px;color:var(--accent-crimson)">Welcome</h3>
+            <p class="muted" style="max-width:320px">Buy plans, upload receipts and start earning. Click Join Now or Register to get started.</p>
+          </div>
+        </div>
+
+        <div class="features" id="features">
+          <div class="feature card">
+            <h4>Quick Setup</h4>
+            <p class="muted">Onboard in minutes with guided materials.</p>
+          </div>
+          <div class="feature card">
+            <h4>Verified Partners</h4>
+            <p class="muted">Trusted merchants and a support network.</p>
+          </div>
+        </div>
+        <!-- Flyer slideshow modal (opens when "Features" clicked) -->
+        <div id="flyerBackdrop" class="modal-backdrop" aria-hidden="true">
+          <div class="modal" role="dialog" aria-modal="true" aria-label="Feature flyers slideshow" style="max-width:760px;">
+            <button id="closeFlyer" class="link-btn" style="float:right;margin-top:-6px">Close ✕</button>
+            <h3 style="color:var(--accent-gold);margin-top:0">Feature Flyers</h3>
+            <div id="flyerSlider" style="position:relative;overflow:hidden;border-radius:8px;">
+              <div id="slides" style="display:flex;transition:transform .4s ease;">
+                <!-- Replace these src values with your flyer image files -->
+                <img src="flyer1.jpg" alt="Flyer 1" style="width:100%;flex:0 0 100%;object-fit:cover" />
+                <img src="flyer2.jpg" alt="Flyer 2" style="width:100%;flex:0 0 100%;object-fit:cover" />
+                <img src="flyer3.jpg" alt="Flyer 3" style="width:100%;flex:0 0 100%;object-fit:cover" />
+                <img src="flyer4.jpg" alt="Flyer 4" style="width:100%;flex:0 0 100%;object-fit:cover" />
+                <img src="flyer5.jpg" alt="Flyer 5" style="width:100%;flex:0 0 100%;object-fit:cover" />
+                <img src="flyer6.jpg" alt="Flyer 6" style="width:100%;flex:0 0 100%;object-fit:cover" />
+                <img src="flyer7.jpg" alt="Flyer 7" style="width:100%;flex:0 0 100%;object-fit:cover" />
+                <img src="flyer8.jpg" alt="Flyer 8" style="width:100%;flex:0 0 100%;object-fit:cover" />
+                <img src="flyer9.jpg" alt="Flyer 9" style="width:100%;flex:0 0 100%;object-fit:cover" />
+                <img src="flyer10.jpg" alt="Flyer 10" style="width:100%;flex:0 0 100%;object-fit:cover" />
+                 <img src="flyer11.jpg" alt="Flyer 11" style="width:100%;flex:0 0 100%;object-fit:cover" />
+                <!-- Plan-specific flyers -->
+                <img id="flyer-pro" src="flyer-pro.jpg" alt="Pro Flyer" style="width:100%;flex:0 0 100%;object-fit:cover" />
+                <img id="flyer-starter" src="flyer-starter.jpg" alt="Starter Flyer" style="width:100%;flex:0 0 100%;object-fit:cover" />
+              </div>
+              <button id="prevFlyer" class="btn-outline" style="position:absolute;left:8px;top:50%;transform:translateY(-50%);">‹</button>
+              <button id="nextFlyer" class="btn-outline" style="position:absolute;right:8px;top:50%;transform:translateY(-50%);">›</button>
+            </div>
+            <div style="text-align:center;margin-top:10px;">
+              <span id="flyerCounter" class="muted">1 / 3</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" style="margin-top:28px">
+      <div class="card">
+        <h3>Contact</h3>
+        <p class="muted">support@techbrainm@gmail.com • +234 8077322725</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div style="max-width:var(--maxw);margin:0 auto;display:flex;justify-content:space-between;align-items:center">
+      <div class="muted">© FORTUNEX • All rights reserved</div>
+      <div class="muted">Built with Brain</div>
+    </div>
+  </footer>
+
+  <!-- Signup Modal -->
+  <div id="signupBackdrop" class="modal-backdrop" role="dialog" aria-modal="true">
+    <div class="modal" role="document">
+      <h3>Register</h3>
+      <form id="signupForm">
+        <input id="su-username" class="input" type="text" placeholder="Username" required />
+        <input id="su-fullname" class="input" type="text" placeholder="Full name" required />
+        <input id="su-phone" class="input" type="tel" placeholder="Phone number" required />
+        <input id="su-email" class="input" type="email" placeholder="Email address" required />
+        <select id="su-country" class="input" required>
+          <option value="">Select country</option>
+          <option value="Nigeria">Nigeria</option>
+          <option value="Other">Other country</option>
+        </select>
+
+        <label class="muted" for="su-plan" style="display:block;margin-bottom:6px">Select plan</label>
+        <select id="su-plan" class="input" required>
+          <option value="">Choose a plan</option>
+          <option value="pro" data-price="14500">Pro — ₦14,500</option>
+          <option value="starter" data-price="7500">Starter — ₦7,500</option>
+        </select>
+
+        <div id="planPrice" class="muted" style="margin-bottom:10px">Price: —</div>
+
+        <input id="su-coupon" class="input" type="text" placeholder="Coupon code (activation code)" />
+        <div style="display:flex;gap:8px;align-items:center;margin-bottom:12px">
+          <input id="su-terms" type="checkbox" />
+          <label for="su-terms" class="muted">I agree to the <a href="#" class="link-btn">terms &amp; conditions</a></label>
+        </div>
+
+        <div style="display:flex;gap:8px">
+          <button id="payCoupon" class="cta" type="submit">Pay for your coupon code</button>
+          <button id="dmMerchant" type="button" class="btn-outline">Don't have a coupon? DM merchant</button>
+        </div>
+
+        <div id="signupMsg" class="muted" style="margin-top:10px"></div>
+
+        <button id="closeSignup" type="button" class="btn-outline" style="margin-top:12px">Close</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Notifications container -->
+  <div id="notifications" aria-live="polite" aria-atomic="true"></div>
+
+  <script>
+    (function(){
+      const notifications = document.getElementById('notifications');
+
+      const firstNames = ['Ayo','Tunde','Chidera','Blessing','Emeka','Nkechi','Samuel','Rita','Ifeanyi','Zainab','Daniel','Mercy','Uche','Sade','Ibrahim'];
+      const packages = [
+        { id: 'starter', label: 'Starter', price: 7500 },
+        { id: 'pro', label: 'Pro', price: 14500 }
+      ];
+
+      function rand(arr){ return arr[Math.floor(Math.random()*arr.length)]; }
+      function randUsername(){
+        const fn = rand(firstNames);
+        const num = Math.floor(Math.random()*9000)+100;
+        return fn + num;
+      }
+      function formatNaira(n){ return '₦' + Number(n).toLocaleString(); }
+
+      function createToast(html, opts = {}){
+        const el = document.createElement('div');
+        el.className = 'toast small';
+        el.innerHTML = '<div class="avatar">'+ (opts.initials || '') +'</div><div class="txt">'+ html +'</div>';
+        notifications.appendChild(el);
+        // reveal
+        requestAnimationFrame(()=> el.classList.add('show'));
+        const duration = opts.duration || 5000;
+        // remove after duration
+        setTimeout(()=> {
+          el.classList.remove('show');
+          setTimeout(()=> el.remove(), 400);
+        }, duration);
+      }
+
+      function randomEvent(){
+        const type = Math.random() < 0.6 ? 'register' : 'withdraw';
+        const username = randUsername();
+        if(type === 'register'){
+          const pkg = rand(packages);
+          const msg = '<span class="who">'+ username +'</span> just registered for <strong>'+ pkg.label +'</strong> ('+ formatNaira(pkg.price) +')';
+          createToast(msg, { initials: username.slice(0,2).toUpperCase(), duration: 6000 });
+        } else {
+          // withdrawal
+          const amount = (Math.floor(Math.random()*90)+10) * 100; // random between 1,000 and 10,000 etc
+          const msg = '<span class="who">'+ username +'</span> just withdrew <strong>'+ formatNaira(amount) +'</strong>';
+          createToast(msg, { initials: username.slice(0,2).toUpperCase(), duration: 6000 });
+        }
+      }
+
+      // show an initial notification after short delay
+      setTimeout(randomEvent, 1200);
+      // then show periodically at random intervals
+      let notifierInterval = setInterval(() => {
+        randomEvent();
+      }, 5000 + Math.floor(Math.random()*7000)); // between ~5s and ~12s
+
+      // stop generating toasts if user has many open to avoid spam
+      const observer = new MutationObserver(()=> {
+        if(notifications.children.length > 6){
+          clearInterval(notifierInterval);
+        }
+      });
+      observer.observe(notifications, { childList: true });
+    })();
+  </script>
+
+  <script>
+    // UI controls
+    const signupBackdrop = document.getElementById('signupBackdrop');
+    const registerNow = document.getElementById('registerNow');
+    const joinNow = document.getElementById('joinNow');
+    const flyerBackdrop = document.getElementById('flyerBackdrop');
+    const closeFlyer = document.getElementById('closeFlyer');
+    const prevFlyer = document.getElementById('prevFlyer');
+    const nextFlyer = document.getElementById('nextFlyer');
+    const slides = document.getElementById('slides');
+    const flyerCounter = document.getElementById('flyerCounter');
+
+    let currentSlide = 0;
+    let autoSlideTimer = null;
+    const AUTO_SLIDE_INTERVAL_MS = 3500;
+
+    function openSignup(){ signupBackdrop.style.display='flex'; document.getElementById('su-username').focus(); }
+    function closeSignup(){ signupBackdrop.style.display='none'; document.getElementById('signupForm').reset(); document.getElementById('planPrice').textContent='Price: —'; document.getElementById('signupMsg').textContent=''; }
+    function openFlyer(){
+      flyerBackdrop.style.display='flex';
+      updateFlyerCounter();
+      startAutoSlide();
+    }
+    function closeFlyerFunc(){
+      flyerBackdrop.style.display='none';
+      stopAutoSlide();
+    }
+
+    function startAutoSlide(){
+      stopAutoSlide();
+      autoSlideTimer = setInterval(() => {
+        const total = slides.children.length;
+        currentSlide = (currentSlide + 1) % total;
+        updateFlyerCounter();
+      }, AUTO_SLIDE_INTERVAL_MS);
+    }
+    function stopAutoSlide(){
+      if(autoSlideTimer){ clearInterval(autoSlideTimer); autoSlideTimer = null; }
+    }
+
+    registerNow.addEventListener('click', openSignup);
+    joinNow.addEventListener('click', openSignup);
+    document.getElementById('closeSignup').addEventListener('click', closeSignup);
+    closeFlyer.addEventListener('click', closeFlyerFunc);
+
+    // plan price update
+    const planSelect = document.getElementById('su-plan');
+    const planPriceEl = document.getElementById('planPrice');
+    planSelect.addEventListener('change', () => {
+      const opt = planSelect.selectedOptions[0];
+      const price = opt ? opt.getAttribute('data-price') : null;
+      planPriceEl.textContent = price ? 'Price: ₦' + Number(price).toLocaleString() : 'Price: —';
+    });
+
+    // DM merchant behavior
+    const dmBtn = document.getElementById('dmMerchant');
+    dmBtn.addEventListener('click', () => {
+      window.open('https://wa.link/w0m5rn','_blank');
+    });
+
+    // form submit handling
+    document.getElementById('signupForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      const country = document.getElementById('su-country').value;
+      const terms = document.getElementById('su-terms').checked;
+      const planOpt = document.getElementById('su-plan').selectedOptions[0];
+      const price = planOpt ? planOpt.getAttribute('data-price') : null;
+
+      if(!terms){ document.getElementById('signupMsg').textContent='You must accept the terms.'; return; }
+      if(!price){ document.getElementById('signupMsg').textContent='Please select a plan.'; return; }
+
+      if(country === 'Other'){
+        // other-country users: direct to merchant link for payment
+        window.open('https://wa.link/w0m5rn','_blank');
+        document.getElementById('signupMsg').textContent='Please complete payment via merchant link.';
+        setTimeout(closeSignup,1200);
+        return;
+      }
+
+      // Nigeria users: open Paystack (replace public key)
+      const email = document.getElementById('su-email').value || prompt('Enter email for payment receipt:');
+      if(!email){ document.getElementById('signupMsg').textContent='Email required for payment.'; return; }
+
+      const amount = Number(price) * 100; // kobo
+      const handler = PaystackPop.setup({
+        key: 'YOUR_PAYSTACK_PUBLIC_KEY', // replace with your Paystack public key
+        email: email,
+        amount: amount,
+        currency: "NGN",
+        ref: ''+Math.floor((Math.random() * 1000000000) + 1),
+        metadata: {
+          custom_fields: [
+            { display_name: "Username", variable_name: "username", value: document.getElementById('su-username').value },
+            { display_name: "Full name", variable_name: "fullname", value: document.getElementById('su-fullname').value }
+          ]
+        },
+        callback: function(response){
+          document.getElementById('signupMsg').textContent = 'Payment successful. Ref: ' + response.reference;
+          setTimeout(closeSignup, 1400);
+          // TODO: send form + payment ref to backend / Google Sheet
+        },
+        onClose: function(){
+          document.getElementById('signupMsg').textContent = 'Payment window closed.';
+        }
+      });
+      handler.openIframe();
+    });
+
+    // close on backdrop click
+    signupBackdrop.addEventListener('click', (ev) => { if(ev.target === signupBackdrop) closeSignup(); });
+    flyerBackdrop.addEventListener('click', (ev) => { if(ev.target === flyerBackdrop) closeFlyerFunc(); });
+
+    // helper for Learn more
+    document.getElementById('learnMore').addEventListener('click', ()=>{ location.hash='#features'; });
+
+    // open flyer slideshow when "Features" nav link is clicked
+    document.querySelectorAll('a[href="#features"]').forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        openFlyer();
+      });
+    });
+
+   // Open flyer modal at a specific slide by element id
+   function openFlyerAtId(imgId){
+     const imgs = Array.from(slides.children);
+     const idx = imgs.findIndex(el => el.id === imgId);
+     if(idx === -1){
+       openFlyer(); // fallback to start
+       return;
+     }
+     currentSlide = idx;
+     openFlyer();
+     updateFlyerCounter();
+   }
+
+   // plan flyer buttons
+   const btnPro = document.getElementById('viewProFlyer');
+   const btnStarter = document.getElementById('viewStarterFlyer');
+   if(btnPro) btnPro.addEventListener('click', ()=> openFlyerAtId('flyer-pro'));
+   if(btnStarter) btnStarter.addEventListener('click', ()=> openFlyerAtId('flyer-starter'));
+
+    // Flyer slideshow logic
+    function updateFlyerCounter(){
+      const totalSlides = slides.children.length;
+      flyerCounter.textContent = (currentSlide + 1) + ' / ' + totalSlides;
+      slides.style.transform = 'translateX(' + (-currentSlide * 100) + '%)';
+    }
+
+    nextFlyer.addEventListener('click', () => {
+      const totalSlides = slides.children.length;
+      currentSlide = (currentSlide + 1) % totalSlides;
+      updateFlyerCounter();
+    });
+
+    prevFlyer.addEventListener('click', () => {
+      const totalSlides = slides.children.length;
+      currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+      updateFlyerCounter();
+    });
+    
+    // ensure auto-slide stops when modal closed via backdrop or Esc
+    flyerBackdrop.addEventListener('click', (ev) => { if(ev.target === flyerBackdrop) { closeFlyerFunc(); } });
+    window.addEventListener('keydown', (ev) => { if(ev.key === 'Escape') closeFlyerFunc(); });
+  </script>
+</body>
+</html>
