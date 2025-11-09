@@ -6,29 +6,21 @@
   <title>FORTUNEX — YOUR NO.1 ONLINE MONEY MAKING PLATFROM</title>
   <meta name="FortuneX is a digital and advertising platform that allow members earn for every activity on the site, you earn every second and minutes you spend on the site either for scrolling, learning, teaching, reading, laughing or listening to music." content="Empower users earn effortlessly" />
 
-  <!-- TikTok Pixel Code Start -->
-  <script>
-  !function (w, d, t) {
-    w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(
-    var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script")
-    ;n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(n,s)};ttq.load('D3KP99BC77U1STIOEL70');ttq.page();
-  }(window, document, 'ttq');
-  </script>
-  <!-- TikTok Pixel Code End -->
+  <!-- TikTok Pixel removed -->
 
   <style>
     :root{
       --bg:#8b0000;
       --card:#ff2e2e;
       --accent-gold:#f2ea97;
-      --accent-crimson:#b30000; /* crimson-ish */
+      --accent-crimson:#b30000;
       --muted:#e6e6e6;
       --glass:rgba(255,255,255,0.03);
       --maxw:1100px;
       font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
     }
     *{box-sizing:border-box}
-    html,body{height:100%;margin:0;background:linear-gradient(180deg,#8b0000 0%, #8b0000 100%); color:#fffff}
+    html,body{height:100%;margin:0;background:linear-gradient(180deg,#8b0000 0%, #8b0000 100%); color:#fff}
     header{display:flex;align-items:center;justify-content:space-between;padding:18px 24px;max-width:var(--maxw);margin:0 auto;}
     .logo{display:flex;align-items:center;gap:12px}
     .logo img{width:44px;height:44px;border-radius:8px;object-fit:cover}
@@ -48,7 +40,8 @@
     .plans{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:20px}
     .plan{background:linear-gradient(180deg,#8b0000,#ff2e2e);padding:14px;border-radius:10px;border:1px solid rgba(255,255,255,0.03);text-align:center}
     .plan h4{margin:0 0 6px;color:var(--accent-crimson)}
-    .plan .price{font-weight:800;font-size:18px;color:rgba(14, 13, 13, 0.06);margin-bottom:8px}
+    /* price text set to black per request */
+    .plan .price{font-weight:800;font-size:18px;color:#000;margin-bottom:8px}
     .features{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:28px}
     .feature{background:var(--card);padding:14px;border-radius:10px;border:1px solid rgba(255,255,255,0.02)}
     footer{max-width:var(--maxw);margin:28px auto;color:#dcdcdc;padding:24px}
@@ -61,7 +54,8 @@
     .small{flex:1}
     .muted{color:#dcdcdc;font-size:13px}
     .link-btn{background:transparent;border:none;color:var(--accent-gold);cursor:pointer;text-decoration:underline;padding:0}
-    /* Notifications (toasts) — centered gold container */
+
+    /* Notifications (centered gold container) */
     #notifications {
       position: fixed;
       top: 50%;
@@ -78,10 +72,9 @@
       padding: 8px;
       box-sizing: border-box;
     }
-
     .toast {
       pointer-events: auto;
-      background: linear-gradient(180deg,#fff8dc,#f7e7a1); /* light gold container */
+      background: linear-gradient(180deg,#fff8dc,#f7e7a1);
       color: #111;
       padding: 14px 16px;
       border-radius: 12px;
@@ -96,9 +89,7 @@
       transition: opacity .36s ease, transform .36s ease;
       font-size: 14px;
     }
-
     .toast.show { opacity: 1; transform: translateY(0); }
-
     .toast .avatar {
       width: 44px;
       height: 44px;
@@ -113,10 +104,10 @@
       font-size: 14px;
       box-shadow: 0 6px 18px rgba(0,0,0,0.25);
     }
-
     .toast .txt { line-height:1.15; color:#111; }
     .toast .txt .who { font-weight:700; display:block; color:#111; }
     .toast.small { width: 100%; font-size:14px; }
+
     @media(max-width:900px){
       .hero{grid-template-columns:1fr}
       .plans{grid-template-columns:repeat(1,1fr)}
@@ -125,7 +116,7 @@
     }
   </style>
 
-  <script src="https://js.paystack.co/v1/inline.js"></script>
+  <!-- payment gateway removed -->
 </head>
 <body>
   <header>
@@ -140,7 +131,7 @@
       <a href="#plans">Plans</a>
       <a href="#features">Features</a>
       <a href="#contact">Contact</a>
-      <butt on id="joinNow" class="cta">JOIN NOW</button>
+      <button id="joinNow" class="cta">JOIN NOW</button>
     </nav>
   </header>
 
@@ -235,7 +226,7 @@
     <section id="contact" style="margin-top:28px">
       <div class="card">
         <h3>Contact</h3>
-        <p class="muted">support@techbrainm@gmail.com • +234 8077322725</p>
+        <p class="muted">support @techbrainm@gmail.com • +234 8077322725</p>
       </div>
     </section>
   </main>
@@ -289,9 +280,29 @@
     </div>
   </div>
 
+  <!-- Manual payment modal (Opay details) -->
+  <div id="manualPaymentModal" class="modal-backdrop" aria-hidden="true" style="display:none;">
+    <div class="modal" role="dialog" aria-modal="true" aria-label="Manual payment">
+      <button id="closeManual" class="link-btn" style="float:right;margin-top:-6px">Close ✕</button>
+      <h3 style="color:var(--accent-gold);margin-top:0">Make Payment to the account below</h3>
+      <div id="manualDetails" style="background:#fff8dc;color:#111;padding:12px;border-radius:8px;margin-bottom:12px;border:1px solid rgba(0,0,0,0.06)">
+        <div><strong>Bank / Provider:</strong> Opay</div>
+        <div><strong>Account name:</strong> Apeh Ngozi Florence</div>
+        <div><strong>Account number:</strong> 6119199392</div>
+        <div id="manualPlan" style="margin-top:6px"><strong>Plan:</strong> —</div>
+        <div id="manualAmount"><strong>Amount (send exactly):</strong> —</div>
+      </div>
+      <p class="muted">Please transfer the exact amount shown for your chosen plan. After transferring, click "I have made payment" and attach your payment proof on WhatsApp.</p>
+      <div style="display:flex;gap:8px;margin-top:8px">
+        <button id="madePaymentBtn" class="cta" type="button">I have made payment</button>
+        <button id="cancelManual" class="btn-outline" type="button">Cancel</button>
+      </div>
+    </div>
+  </div>
+
   <!-- Notifications container -->
   <div id="notifications" aria-live="polite" aria-atomic="true"></div>
-
+  
   <script>
     (function(){
       const notifications = document.getElementById('notifications');
@@ -368,6 +379,13 @@
     const nextFlyer = document.getElementById('nextFlyer');
     const slides = document.getElementById('slides');
     const flyerCounter = document.getElementById('flyerCounter');
+    // manual payment modal elements
+    const manualModal = document.getElementById('manualPaymentModal');
+    const manualPlanEl = document.getElementById('manualPlan');
+    const manualAmountEl = document.getElementById('manualAmount');
+    const madePaymentBtn = document.getElementById('madePaymentBtn');
+    const closeManual = document.getElementById('closeManual');
+    const cancelManual = document.getElementById('cancelManual');
 
     let currentSlide = 0;
     let autoSlideTimer = null;
@@ -414,56 +432,87 @@
     // DM merchant behavior
     const dmBtn = document.getElementById('dmMerchant');
     dmBtn.addEventListener('click', () => {
-      window.open('https://wa.link/w0m5rn','_blank');
+      window.open('https://wa.link/10er73','_blank');
     });
 
-    // form submit handling
+    // form submit handling -> show manual Opay details and require exact amount
     document.getElementById('signupForm').addEventListener('submit', function(e){
       e.preventDefault();
       const country = document.getElementById('su-country').value;
       const terms = document.getElementById('su-terms').checked;
       const planOpt = document.getElementById('su-plan').selectedOptions[0];
       const price = planOpt ? planOpt.getAttribute('data-price') : null;
+      const planLabel = planOpt ? planOpt.textContent : '';
+      const username = document.getElementById('su-username').value.trim();
+      const fullname = document.getElementById('su-fullname').value.trim();
+      const phone = document.getElementById('su-phone').value.trim();
+      const email = document.getElementById('su-email').value.trim();
 
       if(!terms){ document.getElementById('signupMsg').textContent='You must accept the terms.'; return; }
       if(!price){ document.getElementById('signupMsg').textContent='Please select a plan.'; return; }
 
       if(country === 'Other'){
         // other-country users: direct to merchant link for payment
-        window.open('https://wa.link/w0m5rn','_blank');
+        window.open('https://wa.link/o9v06h','_blank');
         document.getElementById('signupMsg').textContent='Please complete payment via merchant link.';
         setTimeout(closeSignup,1200);
         return;
       }
 
-      // Nigeria users: open Paystack (replace public key)
-      const email = document.getElementById('su-email').value || prompt('Enter email for payment receipt:');
-      if(!email){ document.getElementById('signupMsg').textContent='Email required for payment.'; return; }
+      // Fill manual modal with chosen plan and exact amount
+      manualPlanEl.innerHTML = '<strong>Plan:</strong> ' + planLabel;
+      manualAmountEl.innerHTML = '<strong>Amount (send exactly):</strong> ₦' + Number(price).toLocaleString();
 
-      const amount = Number(price) * 100; // kobo
-      const handler = PaystackPop.setup({
-        key: 'YOUR_PAYSTACK_PUBLIC_KEY', // replace with your Paystack public key
-        email: email,
-        amount: amount,
-        currency: "NGN",
-        ref: ''+Math.floor((Math.random() * 1000000000) + 1),
-        metadata: {
-          custom_fields: [
-            { display_name: "Username", variable_name: "username", value: document.getElementById('su-username').value },
-            { display_name: "Full name", variable_name: "fullname", value: document.getElementById('su-fullname').value }
-          ]
-        },
-        callback: function(response){
-          document.getElementById('signupMsg').textContent = 'Payment successful. Ref: ' + response.reference;
-          setTimeout(closeSignup, 1400);
-          // TODO: send form + payment ref to backend / Google Sheet
-        },
-        onClose: function(){
-          document.getElementById('signupMsg').textContent = 'Payment window closed.';
-        }
-      });
-      handler.openIframe();
+      // store user details on modal for WhatsApp message
+      manualModal.dataset.username = username;
+      manualModal.dataset.fullname = fullname;
+      manualModal.dataset.phone = phone;
+      manualModal.dataset.email = email;
+      manualModal.dataset.plan = planLabel;
+      manualModal.dataset.price = price;
+
+      // show manual modal
+      manualModal.style.display = 'flex';
+      manualModal.setAttribute('aria-hidden','false');
     });
+
+    // "I have made payment" -> open WhatsApp with prefilled message and close modal
+    if(madePaymentBtn){
+      madePaymentBtn.addEventListener('click', function(){
+        const u = manualModal.dataset.username || '';
+        const f = manualModal.dataset.fullname || '';
+        const p = manualModal.dataset.phone || '';
+        const e = manualModal.dataset.email || '';
+        const plan = manualModal.dataset.plan || '';
+        const price = manualModal.dataset.price || '';
+        const status = 'inactive';
+
+        const message = [
+          'Hello, I want to verify my account with the following details and attached is my payment proof:',
+          '',
+          'Username: ' + u,
+          'Email: ' + e,
+          'Full name: ' + f,
+          'Phone number: ' + p,
+          'Plan: ' + plan,
+          'Amount: ₦' + (price ? Number(price).toLocaleString() : ''),
+          'Account status: ' + status
+        ].join('%0A');
+
+        const waNumber = '2348077322725'; // 08077322725 international
+        const waLink = 'https://wa.me/' + waNumber + '?text=' + encodeURIComponent(message);
+        window.open(waLink, '_blank');
+
+        manualModal.style.display = 'none';
+        manualModal.setAttribute('aria-hidden','true');
+        document.getElementById('signupForm').reset();
+        document.getElementById('planPrice').textContent='Price: —';
+        document.getElementById('signupMsg').textContent='You will be redirected to WhatsApp. Please attach your payment proof there.';
+      });
+    }
+
+    if(closeManual) closeManual.addEventListener('click', function(){ manualModal.style.display='none'; manualModal.setAttribute('aria-hidden','true'); });
+    if(cancelManual) cancelManual.addEventListener('click', function(){ manualModal.style.display='none'; manualModal.setAttribute('aria-hidden','true'); });
 
     // close on backdrop click
     signupBackdrop.addEventListener('click', (ev) => { if(ev.target === signupBackdrop) closeSignup(); });
